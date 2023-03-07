@@ -155,28 +155,32 @@ a:focus {
 
 .button {
   font-family: "Roboto";
-  background-color: var(--light-grey);
-  max-width: 121px;
-  height: 38px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.39;
-  letter-spacing: 0.03em;
   text-align: center;
   border: 0;
   border-radius: 4px;
-}
-
-.button-hero {
-  min-width: 200px;
+  width: 200px;
   height: 50px;
   line-height: 1.6;
   letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--blue);
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-portfolio {
   padding: 6px 22px;
+  max-width: 121px;
+  height: 38px;
+  line-height: 1.39;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  background-color: var(--light-grey);
+  box-shadow: 0px 0px 0px 0px;
 }
 
 .button-portfolio:not(:last-child) {
@@ -184,11 +188,15 @@ a:focus {
 }
 .button:hover,
 .button:focus {
-  color: var(--white);
-  background-color: var(--blue);
   cursor: pointer;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
   transition: color 250ms var(--cubic-bezier), background-color 250ms var(--cubic-bezier);
+}
+.button-portfolio:hover,
+.button-portfolio:focus {
+  color: var(--white);
+  background-color: var(--blue);
 }
 
 /* --HERO SECTION-- */
@@ -545,16 +553,15 @@ h5 /* .text-card-title */ {
   align-items: baseline;
 }
 
-.footer-social-links-text {
-  text-align: left;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.03em;
+.footer-header {
+  color: var(--white);
   margin-bottom: 20px;
 }
 
+.icon-send {
+  margin-left: 24px;
+  fill: var(--white);
+}
 /* BACKDROP */
 
 .backdrop {
@@ -606,3 +613,5 @@ h5 /* .text-card-title */ {
   color: var(--blue);
   transition: color 250ms var(--cubic-bezier);
 }
+
+/* FORMS */
