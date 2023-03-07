@@ -600,6 +600,7 @@ h5 /* .text-card-title */ {
 
 .close-btn {
   position: absolute;
+  padding: 6px;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -610,13 +611,16 @@ h5 /* .text-card-title */ {
   cursor: pointer;
   color: var(--black);
 }
-
+.icon-close {
+  justify-content: center;
+  align-items: center;
+}
 .close-btn:hover {
   color: var(--blue);
   transition: color 250ms var(--cubic-bezier);
 }
 
-/* FORMS */
+/* NEWSLETTER */
 
 form[name="newsletter"] {
   display: flex;
@@ -641,4 +645,7 @@ form[name="newsletter"] input {
 form[name="newsletter"] input:hover,
 form[name="newsletter"] input:focus {
   border: 1px solid var(--blue);
+  transition: color 250ms var(--cubic-bezier);
 }
+
+
