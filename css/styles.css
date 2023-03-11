@@ -189,7 +189,7 @@ a:focus {
 .button:hover,
 .button:focus {
   cursor: pointer;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+  background-color: #1976d2;
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
   transition: color 250ms var(--cubic-bezier), background-color 250ms var(--cubic-bezier);
 }
@@ -589,6 +589,7 @@ h5 /* .text-card-title */ {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   min-width: 528px;
   min-height: 581px;
   background-color: #fff;
@@ -603,21 +604,256 @@ h5 /* .text-card-title */ {
   padding: 6px;
   top: 8px;
   right: 8px;
-  width: 30px;
-  height: 30px;
+  max-width: 32px;
+  max-height: 32px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
   color: var(--black);
 }
-.icon-close {
-  justify-content: center;
-  align-items: center;
+
+.close-btn:hover,
+.close-btn:focus {
+  fill: var(--blue);
+  border-color: var(--blue);
+  transition: fill 250ms var(--cubic-bezier) border-color 250ms var(--cubic-bezier);
 }
-.close-btn:hover {
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+form[name="modal-form"] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-form-field {
+  color: var(--grey);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.modal-form-input {
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  height: 40px;
+}
+
+.modal-form-field svg {
+  position: absolute;
+  top: 28px;
+  left: 12px;
+}
+
+.modal-form-comment {
+  outline: none;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 14px 16px 10px 16px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--black);
+}
+
+.modal-form-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-field input:focus,
+.modal-form-field input:focus + svg,
+.modal-form-field input:hover,
+.modal-form-field input:hover + svg,
+.modal-form-field textarea:focus,
+.modal-form-field textarea:hover {
+  border-color: var(--blue);
+  fill: var(--blue);
+  transition: border-color 250ms var(--cubic-bezier), fill 250ms var(--cubic-bezier);
+}
+
+/* TRY OUT FROM W3 SCHOOL */
+
+/* Customize the label (the container) */
+.modal-form-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /*   position: relative;
+ */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.modal-form-checkbox input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  width: 16px;
+  height: 15px;
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 2px;
+}
+
+.checkmark svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  visibility: hidden;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+}
+
+/*   -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  left: 15px;
+  background-color: transparent;
+  border: 2px solid var(--black);
+  border-radius: 2px; */
+
+/* On mouse-over, add a grey background color */
+.modal-form-checkbox:hover input ~ .checkmark {
+  border-color: var(--blue);
+}
+
+/* When the checkbox is checked, add a blue background */
+.modal-form-checkbox input:checked ~ .checkmark {
+  background-color: #2196f3;
+  border-color: var(--blue);
+  fill: var(--white);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+/* .checkmark:after ~ .checkmark {
+  content: "";
+  position: absolute;
+  display: none;
+} */
+
+.checkbox:checked ~ .check-icon {
+  background-color: blue;
+  visibility: visible;
+  fill: var(--white);
+}
+
+/* Show the checkmark when checked */
+.modal-form-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.modal-form-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox input:checked + label > svg {
+  visibility: visible;
+}
+/* END TRY OUT FROM W3 SCHOOL */
+
+/* 
+.modal-form-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 24px;
+} */
+
+/* .modal-form-checkbox-box {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  position: absolute;
+  left: 15px;
+  background-color: transparent;
+  border: 2px solid var(--black);
+  border-radius: 2px;
+} */
+
+/* .modal-form-checkbox svg {
+  visibility: hidden;
+} */
+/* .modal-form-checkbox:checked {
+  visibility: visible;
+  border-color: #1976d2;
+} */
+
+/* .modal-form-checkbox:checked + .modal-form-checkbox-box {
+  color: #2196f3;
+  visibility: visible;
+} */
+/* .modal-form-checkbox-box:checked + label > svg {
+  visibility: visible;
+} */
+
+.modal-form-checkbox span {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--grey);
+}
+
+.modal-form-checkbox span a {
   color: var(--blue);
-  transition: color 250ms var(--cubic-bezier);
+  text-decoration: underline;
+}
+
+.modal-form-checkbox span a:hover,
+.modal-form-checkbox span a:focus {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.modal-form-button {
+  margin: auto;
 }
 
 /* NEWSLETTER */
@@ -647,5 +883,3 @@ form[name="newsletter"] input:focus {
   border: 1px solid var(--blue);
   transition: color 250ms var(--cubic-bezier);
 }
-
-

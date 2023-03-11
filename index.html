@@ -17,7 +17,7 @@
 
   <body>
     <!-- HEADER -->
-    <header class="page-header">
+    <header class="page-header portfolio">
       <div class="container">
         <div class="navbar">
           <!-- LOGO -->
@@ -25,20 +25,20 @@
           <!-- NAVBAR -->
           <nav class="main-nav">
             <ul class="main-nav-list">
-              <li class="main-nav-field is-active"><a href="./index.html">Agencja</a></li>
-              <li class="main-nav-field"><a href="./portfolio.html">Portfolio</a></li>
-              <li class="main-nav-field"><a href="#">Kontakt</a></li>
+              <li class="main-nav-item is-active"><a href="./index.html">Agencja</a></li>
+              <li class="main-nav-item"><a href="./portfolio.html">Portfolio</a></li>
+              <li class="main-nav-item"><a href="#">Kontakt</a></li>
             </ul>
           </nav>
           <!-- CONTACT -->
           <ul class="contact-link-list">
             <li class="contact-link">
-              <a class="contact-link-field" href="mailto:info@devstudio.com"><svg class="contact-icon" width="16" height="12">
+              <a class="contact-link-item" href="mailto:info@devstudio.com"><svg class="contact-icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope">
               </svg>info@devstudio.com</a>
             </li>
             <li class="contact-link">
-              <a class="contact-link-field" href="tel:+48111111111"><svg class="contact-icon" width="10" height="16">
+              <a class="contact-link-item" href="tel:+48111111111"><svg class="contact-icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone">
               </svg>+48 111 111 111</a>
             </li>
@@ -354,39 +354,39 @@
         <!-- ADDRESS -->
         <address class="address">
           <ul class="address-link-list">
-            <li class="address-link-field">
+            <li class="address-link-item">
               <a href="https://goo.gl/maps/1uCLYBcG9Ry3D8Pi7" target="_blank">m. Warszawa, Aleje Jerozolimskie 21</a>
             </li>
-            <li class="address-link-field contact"><a href="mailto:info@example.com">info@example.com</a></li>
-            <li class="address-link-field contact"><a href="tel:+48111111111">+48 111 111 111</a></li>
+            <li class="address-link-item contact"><a href="mailto:info@example.com">info@example.com</a></li>
+            <li class="address-link-item contact"><a href="tel:+48111111111">+48 111 111 111</a></li>
           </ul>
         </address>
         </div>
         <div class="footer-social-links">
         <h5 class="footer-header">Dołącz do nas</h5>
         <ul class="social-links">
-          <li class="social-link-field">
+          <li class="social-link-item">
             <a class="social-link" href="https://www.instagram.com/">
               <svg class="social-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="social-link-field">
+          <li class="social-link-item">
             <a class="social-link" href="https://twitter.com/">
               <svg class="social-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
-          <li class="social-link-field">
+          <li class="social-link-item">
             <a class="social-link" href="https://www.facebook.com/">
               <svg class="social-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="social-link-field">
+          <li class="social-link-item">
             <a class="social-link" href="https://www.linkedin.com/">
               <svg class="social-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-linkedin"></use>
@@ -423,14 +423,16 @@
         <form name="modal-form">
           <label class="modal-form-field">
             Imię
-            <input class="modal-form-input" type="text" name="name" minlength="3" pattern="^[a-zA-Z]+$" title="Your name must only contain letters." required/>
+            <input class="modal-form-input" type="text" name="name" minlength="3" required/>
+            <!-- pattern="^[a-zA-Z]+$" title="Your name must only contain letters." -->
             <svg width="18" height="18">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </label>
           <label class="modal-form-field">
             Telefon
-            <input class="modal-form-input" type="tel" name="tel" minlength="7" pattern="[0-9]" title="Your phone number must only contain numbers." required/>
+            <input class="modal-form-input" type="tel" name="tel" required/>
+            <!-- pattern="[0-9]{11}" title="Your phone number must only contain numbers."-->
             <svg width="18" height="18">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
@@ -448,9 +450,11 @@
           </label>
           <label class="modal-form-checkbox">
             <input type="checkbox" name="checkbox" value="agree" />
-            <svg width="16" height="15">
-              <use href="./images/icons.svg#icon-check"></use>
-            </svg>
+            <span class="checkmark">
+              <svg class="check-icon" width="16" height="15">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </span>
             <span>Oświadczam iż akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę Prywatności</a>.</span>
           </label>
           <button type="submit" class="button modal-form-button">Wyślij</button>
