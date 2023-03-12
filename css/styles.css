@@ -686,126 +686,17 @@ form[name="modal-form"] {
   fill: var(--blue);
   transition: border-color 250ms var(--cubic-bezier), fill 250ms var(--cubic-bezier);
 }
-
-/* TRY OUT FROM W3 SCHOOL */
-
-/* Customize the label (the container) */
 .modal-form-checkbox {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  /*   position: relative;
- */
+  gap: 7px;
+  position: relative;
   margin-top: 10px;
   margin-bottom: 20px;
-  height: 24px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
-/* Hide the browser's default checkbox */
 .modal-form-checkbox input {
-  position: relative;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: relative;
-  width: 16px;
-  height: 15px;
-  background-color: var(--white);
-  border: 2px solid var(--black);
-  border-radius: 2px;
-}
-
-.checkmark svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 15px;
-  visibility: hidden;
-  /* position: absolute;
-  top: 50%;
-  left: 50%; */
-}
-
-/*   -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  left: 15px;
-  background-color: transparent;
-  border: 2px solid var(--black);
-  border-radius: 2px; */
-
-/* On mouse-over, add a grey background color */
-.modal-form-checkbox:hover input ~ .checkmark {
-  border-color: var(--blue);
-}
-
-/* When the checkbox is checked, add a blue background */
-.modal-form-checkbox input:checked ~ .checkmark {
-  background-color: #2196f3;
-  border-color: var(--blue);
-  fill: var(--white);
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-/* .checkmark:after ~ .checkmark {
-  content: "";
-  position: absolute;
-  display: none;
-} */
-
-.checkbox:checked ~ .check-icon {
-  background-color: blue;
-  visibility: visible;
-  fill: var(--white);
-}
-
-/* Show the checkmark when checked */
-.modal-form-checkbox input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.modal-form-checkbox .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.checkbox input:checked + label > svg {
-  visibility: visible;
-}
-/* END TRY OUT FROM W3 SCHOOL */
-
-/* 
-.modal-form-checkbox {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  height: 24px;
-} */
-
-/* .modal-form-checkbox-box {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -813,26 +704,20 @@ form[name="modal-form"] {
   height: 15px;
   position: absolute;
   left: 15px;
-  background-color: transparent;
+  background-color: var(--white);
   border: 2px solid var(--black);
   border-radius: 2px;
-} */
+}
 
-/* .modal-form-checkbox svg {
-  visibility: hidden;
-} */
-/* .modal-form-checkbox:checked {
-  visibility: visible;
-  border-color: #1976d2;
-} */
+.modal-form-checkbox input:hover {
+  border-color: var(--blue);
+}
 
-/* .modal-form-checkbox:checked + .modal-form-checkbox-box {
-  color: #2196f3;
-  visibility: visible;
-} */
-/* .modal-form-checkbox-box:checked + label > svg {
-  visibility: visible;
-} */
+.modal-form-checkbox input:checked {
+  opacity: 0;
+  background-color: var(--blue);
+  transition: opacity 250ms var(--cubic-bezier);
+}
 
 .modal-form-checkbox span {
   font-size: 14px;
