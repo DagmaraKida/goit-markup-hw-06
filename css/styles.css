@@ -589,7 +589,8 @@ h5 /* .text-card-title */ {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 40px;
+  /*   padding: 40px;
+ */
   min-width: 528px;
   min-height: 581px;
   background-color: #fff;
@@ -600,10 +601,8 @@ h5 /* .text-card-title */ {
 }
 
 .close-btn {
-  position: absolute;
+  margin-left: auto;
   padding: 6px;
-  top: 8px;
-  right: 8px;
   max-width: 32px;
   max-height: 32px;
   background-color: #fff;
@@ -633,6 +632,8 @@ form[name="modal-form"] {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 40px;
+  padding-top: 0;
 }
 
 .modal-form-field {
