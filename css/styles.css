@@ -601,7 +601,10 @@ h5 /* .text-card-title */ {
 }
 
 .close-btn {
+  display: block;
   margin-left: auto;
+  margin-top: 8px;
+  margin-right: 8px;
   padding: 6px;
   max-width: 32px;
   max-height: 32px;
